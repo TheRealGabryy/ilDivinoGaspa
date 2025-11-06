@@ -1,0 +1,5 @@
+package GameBuilder;
+
+public enum Personaggi {
+    Celestino_V, Omero, Orazio, Ovidio, Lucano, Enea, Cesare, Elettra, Ettore, Lavinia, Lucrezia, Cornelia, Saladino, Aristotele, Socrate, Platone, Democrito, Epicuro, Seneca, Cicerone, Minosse, Semiramide, Didone, Cleopatra, Elena, Achille, Paride, Tristano, Paolo, Francesca, Cerbero, Ciacco, Pluto, Flegiàs, Filippo_Argenti, Farinata_degli_Uberti, Cavalcante_dei_Cavalcanti, Alessandro_Magno, Dionisio_di_Siracusa, Attila, Pirro, Sesto_Pompeo, Pier_delle_Vigne, Lano, Jacopo_da_SantAndrea, Capaneo, Brunetto_Latini, Guido_Guerra, Tegghiaio_Aldobrandi, Jacopo_Rusticucci, Venedico_Caccianemico, Giasone, Alessio_Interminei, Taide, Niccolò_III, Bonifacio_VIII, Tiresia, Manto, Arunte, Ciampolo, Cagnazzo, Barbariccia, Frate_Catalano, Caifas, Vanni_Fucci, Caco, Ulisse, Guido_da_Montefeltro, Maometto, Ali, Bertran_de_Born, Gianni_Schicchi, Mirra, Sinon, Potifar, Alessandro, Napoleone, Mordred, Bocca_degli_Abati, Buoso_da_Duera, Fra_Alberigo, Branca_Doria, Giuda_Iscariota, Bruto, Cassio, Lucifero
+}
