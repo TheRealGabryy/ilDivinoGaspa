@@ -1,27 +1,22 @@
 package Levels;
 
 public class Anima {
-    private int peccatiCommessi;
-    private int tempoDaScontare;
 
-    public Anima(int peccatiCommessi, int tempoDaScontare) {
+    private final int peccatiCommessi;
+    private final String tempoDaScontare;
+
+    public Anima(int peccatiCommessi, String tempoDaScontare) {
         this.peccatiCommessi = peccatiCommessi;
         this.tempoDaScontare = tempoDaScontare;
+    }
+
+
+    //CREO SOLO I GETTER PERCHE NON LI SETTO MAI SE NON NEL CONSTRUCTOR
+    public String getTempoDaScontare() {
+        return tempoDaScontare;
     }
 
     public int getPeccatiCommessi() {
         return peccatiCommessi;
-    }
-
-    public void setPeccatiCommessi(int peccatiCommessi) {
-        this.peccatiCommessi = peccatiCommessi;
-    }
-
-    public int getTempoDaScontare() {
-        return tempoDaScontare;
-    }
-
-    public void setTempoDaScontare(int tempoDaScontare) {
-        this.tempoDaScontare = tempoDaScontare;
     }
 }

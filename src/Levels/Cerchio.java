@@ -4,10 +4,10 @@ import Models.Dialogo;
 
 import java.util.ArrayList;
 
-public class Cerchio {
-    private String nome;
-    private String descrizione;
-    private ArrayList<Anima> anime;
+public class Cerchio { //SI POTREBBE CONVERTIRE in una record class, lo possiamo fare più avanti ma è un argomento avanzato
+    private final String nome;
+    private final String descrizione;
+    private final ArrayList<Anima> anime;
 
     public Cerchio(String nome, String descrizione, ArrayList<Anima> anime) {
         this.nome = nome;
@@ -19,23 +19,12 @@ public class Cerchio {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public String getDescrizione() {
         return descrizione;
-    }
-
-    public void setDescrizione(String descrizione) {
-        this.descrizione = descrizione;
     }
 
     public ArrayList<Anima> getAnime() {
         return anime;
     }
 
-    public void setAnime(ArrayList<Anima> anime) {
-        this.anime = anime;
-    }
 }
