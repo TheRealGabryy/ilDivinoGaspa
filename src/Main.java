@@ -1,4 +1,4 @@
-import GameBuilder.Cerchi;
+import GameBuilder.*;
 import System.*;
 
 import java.util.Scanner;
@@ -14,9 +14,9 @@ public class Main {
             "Carica partita (Coming Soon)",
             "Esci"
     };
+
     public static void printBasicTutorial() throws InterruptedException/*questo è semplicemente l'errore che da quando il THREAD fallisce
-    (mai essendo che è un banalissimo .sleep), lo da intelliJ in automatico*/
-    { //questo è il tutorial BASE BASE del gioco, come comandi, e come funziona in termini di tasti.
+    (mai essendo che è un banalissimo .sleep), lo da intelliJ in automatico*/ { //questo è il tutorial BASE BASE del gioco, come comandi, e come funziona in termini di tasti.
         System.out.println("Ti trovi all'inferno");
         Thread.sleep(1500);
         System.out.println("Non hai idea di come ci sei finito qui...");
@@ -41,22 +41,22 @@ public class Main {
             se facessi il raccoglimento della variabile, e gli assegno il valore che butta fuori ogni case.*/
 
             /*DILEMMA:
-            *
-            * SE FARE CHE C'è UN METODO SOLO CHIMATATO "Gioca Cerchio" dove gli passo come parametro il cerchio, e nel cerchio che passo come paramentro ho contenute tutte le info-
-            *
-            * OPPURE SE FARE QUALCOSA DI UN MINIMO MENO "EFFICENTE" in termini di codifica, ma più leggibile, ovvero diversi metodi per i diversi cerchi.
-            *
-            * se facciamo un metodo UNIVOCO per tutti i cerchi allora risulterebbe anche più facile aggiungere cerchi*/
+             *
+             * SE FARE CHE C'è UN METODO SOLO CHIMATATO "Gioca Cerchio" dove gli passo come parametro il cerchio, e nel cerchio che passo come paramentro ho contenute tutte le info-
+             *
+             * OPPURE SE FARE QUALCOSA DI UN MINIMO MENO "EFFICENTE" in termini di codifica, ma più leggibile, ovvero diversi metodi per i diversi cerchi.
+             *
+             * se facciamo un metodo UNIVOCO per tutti i cerchi allora risulterebbe anche più facile aggiungere cerchi*/
             haVinto = switch (cerchi[i]) {
-                case Limbo -> cerchioLimbo();
-                case Lussuriosi -> cerchioLussuriosi();
-                case Golosi -> cerchioGolosi();
-                case Avari_e_Prodighi -> cerchioAvari();
-                case Iracondi_e_Accidiosi -> cerchioIracondi();
-                case Eretici -> cerchioEretici();
-                case Violenti -> cerchioViolenti();
-                case Fraudolenti -> cerchioFraudolenti();
-                case Traditori -> cerchioTraditori();
+                case Limbo -> Inferno.cerchioLimbo();
+                case Lussuriosi -> Inferno.cerchioLussuriosi();
+                case Golosi -> Inferno.cerchioGolosi();
+                case Avari_e_Prodighi -> Inferno.cerchioAvari();
+                case Iracondi_e_Accidiosi -> Inferno.cerchioIracondi();
+                case Eretici -> Inferno.cerchioEretici();
+                case Violenti -> Inferno.cerchioViolenti();
+                case Fraudolenti -> Inferno.cerchioFraudolenti();
+                case Traditori -> Inferno.cerchioTraditori();
             };
 
             if (!haVinto) { //se ha perso, torna alla schermata principale. per perdere devi schiacciare "indietro" nel gioco, sostanzialmente arrendendoti.
@@ -125,46 +125,5 @@ public class Main {
         return true;
     }
 
-
-
-    //SEZIONE CERCHI. qui abbiamo ogni cerchio di quelli PRESENTI NELL'ENUMERATORE. sono dei metodi boolean perchè ritornano true se il giocatore ha vinto. e false se decide di arrendersi.
-    public static boolean cerchioLimbo() {
-        System.out.println("Ti trovi nel Limbo");
-        return true;
-    }
-
-    public static boolean cerchioLussuriosi() {
-        System.out.println("Ti trovi nei Lussuriosi");
-        return true;
-    }
-
-    public static boolean cerchioGolosi() {
-        System.out.println("Ti trovi nei Golosi");
-        return true;
-    }
-    public static boolean cerchioAvari() {
-        System.out.println("Ti trovi nei Avari");
-        return true;
-    }
-    public static boolean cerchioIracondi() {
-        System.out.println("Ti trovi negli Iracondi");
-        return true;
-    }
-    public static boolean cerchioEretici() {
-        System.out.println("Ti trovi negli Eretici");
-        return true;
-    }
-    public static boolean cerchioViolenti() {
-        System.out.println("Ti trovi nei Violenti");
-        return true;
-    }
-    public static boolean cerchioFraudolenti() {
-        System.out.println("Ti trovi nei Fraudolenti");
-        return true;
-    }
-    public static boolean cerchioTraditori() {
-        System.out.println("Ti trovi nei Traditori");
-        return true;
-    }
 
 }
