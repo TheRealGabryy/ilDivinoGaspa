@@ -1,29 +1,37 @@
 package Models;
-
-import java.util.ArrayList;
+import java.util.Objects;
 
 public class Dialogo {
-    private String frase;
-    private ArrayList<Integer> scelte;
+    private final String testo;
+    private final String[] opzioni;
 
-    public Dialogo(String frase, ArrayList<Integer> scelte) {
-        this.frase = frase;
-        this.scelte = scelte;
+    public Dialogo(String testo, String[] opzioni) {
+        this.testo = testo;
+        this.opzioni = opzioni;
     }
 
-    public String getFrase() {
-        return frase;
+    public Dialogo(String testo) {
+        this.testo = testo;
+        this.opzioni = null;
     }
 
-    public void setFrase(String frase) {
-        this.frase = frase;
+    public String toString() {
+        return "> " + testo + "\n";
     }
 
-    public ArrayList<Integer> getScelte() {
-        return scelte;
+    public void printPozioni() {
+        for (int i = 0; i < Objects.requireNonNull(opzioni).length; i++) {
+            System.out.println((i+1) + ": " + opzioni[i]);
+        }
     }
-
-    public void setScelte(ArrayList<Integer> scelte) {
-        this.scelte = scelte;
-    }
+    /*
+    * COME USARE LA CLASSE DIALOGO:
+    *
+    * Per stampare un dialologo, puoi fare: System.out.println(new Dialogo("testo del dialogo"))
+    *
+    * puoi anche dichiaranrlo con le opzioni ad esempio:
+    * Dialogo d = new Dialogo("testo qui", scelte) <- le scelte posso anche essere NON messe, come vedi ci sono 2 costruttori
+    * System.out.println(d); <- stampa SOLO IL TESTO
+    * d.printOpzioni(); <- stampa le opzioni
+    * */
 }

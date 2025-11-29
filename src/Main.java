@@ -32,7 +32,7 @@ public class Main {
         System.out.println("Nuon Divertimento!");
     }
 
-    public static void iniziaGioco() {
+    public static void iniziaGioco() throws InterruptedException {
         boolean haVinto = false;
         for (int i = 0; i < cerchi.length; i++) { // Quando inizio la partita, devo completare tutti i cerchi, dove "tutti i cerchi" sono definiti con cerchi.lenght
 
@@ -104,7 +104,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Questa feature è coming soon"); //alla fine non fa nulla
-                    break;
+                    continue; //continue significa: vai al prossimo giro del circlo
                 case 3:
                     System.out.println("Uscita programma"); //chiunde il programma
                     continua = false;

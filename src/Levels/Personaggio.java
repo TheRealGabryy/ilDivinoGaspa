@@ -6,13 +6,11 @@ import java.util.ArrayList;
 
 public class Personaggio {
     private final String nome;
-    private final ArrayList<Dialogo> dialoghi;
-    private int livello;
+    private final ArrayList<Dialogo> dialoghi; //<- la classe Dialogo può anche essere dichiarata a parte
 
-    public Personaggio(String nome, ArrayList<Dialogo> dialoghi, int livello) {
+    public Personaggio(String nome, ArrayList<Dialogo> dialoghi) {
         this.nome = nome;
         this.dialoghi = dialoghi;
-        this.livello = livello;
     }
 
     public String getNome() {
@@ -23,11 +21,7 @@ public class Personaggio {
         return dialoghi;
     }
 
-    public int getLivello() {
-        return livello;
-    }
-
-    public void setLivello(int livello) {
-        this.livello = livello;
+    public String printDialogo(int index) {
+        return dialoghi.get(index).toString();
     }
 }
